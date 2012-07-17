@@ -48,8 +48,7 @@ class rbldnsd (
     $config_source      = params_lookup('config_source'),
     $config_template    = params_lookup('config_template'),
     $disabled_hosts     = params_lookup('disabled_hosts'),
-    $zones              = params_lookup('vrrp_instances'),
-    $virtual_server_groups = params_lookup('virtual_server_groups'),
+    $zones              = params_lookup('zones'),
     ) inherits rbldnsd::params {
 
     package { 'rbldnsd':
