@@ -34,7 +34,7 @@
 # specified as a single dash, -, and in this case pid file
 # will be /var/run/rbldnsd.pid :
 #
-RBLDNSD="- -r/var/lib/rbldns \
+RBLDNSD="- -r/var/lib/rbldns -b<%= listener %>\
 <% zones.each do |zone| -%>
   <%= zone %> \
 <% end -%>  
