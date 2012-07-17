@@ -9,5 +9,6 @@ class rbldnsd::params {
     $config_source      = undef
     $disabled_hosts     = []
     $zones              = []
+    $listener           = '127.0.0.1'
 
 }

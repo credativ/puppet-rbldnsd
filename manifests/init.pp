@@ -32,9 +32,13 @@
 # [* disabled_hosts *]
 #   A list of hosts whose rbldnsd will be disabled, if their
 #   hostname matches a name in the list.
+# 
+# [* listener *]
+#   Specify on which interface/ip rbldnsd should listen
 #
 # [* zones *]
 #   Specify the zones that should be managed by rbldnsd
+#   (Default: 127.0.0.1)
 #
 # == Author:
 #
@@ -49,6 +53,7 @@ class rbldnsd (
     $config_template    = params_lookup('config_template'),
     $disabled_hosts     = params_lookup('disabled_hosts'),
     $zones              = params_lookup('zones'),
+    $listener           = params_lookup('listener'),
     ) inherits rbldnsd::params {
 
     package { 'rbldnsd':
