@@ -1,0 +1,4 @@
+manifests   etc/puppet/modules/rbldnsd
+templates   etc/puppet/modules/rbldnsd
+LICENSE     usr/share/doc/puppet-module-rbldnsd
+README*     usr/share/doc/puppet-module-rbldnsd
