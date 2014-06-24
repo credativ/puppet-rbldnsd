@@ -1,3 +1,9 @@
+puppet-module-rbldnsd (1.0.2) unstable; urgency=medium
+
+  * Change module path
+
+ -- Patrick Schoenfeld <patrick.schoenfeld@credativ.de>  Tue, 24 Jun 2014 10:12:59 +0200
+
 puppet-module-rbldnsd (1.0.1) unstable; urgency=low
 
   * Initial debian release.

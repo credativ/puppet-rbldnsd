@@ -1,1 +1,1 @@
-etc/puppet/modules/rbldnsd
+usr/share/puppet/modules.available/rbldnsd
