@@ -1,3 +1,9 @@
+puppet-module-rbldnsd (1.0.3) unstable; urgency=medium
+
+  * add puppet disclaimer to template
+
+ -- Arnd Hannemann <arnd.hannemann@credativ.de>  Wed, 02 Jul 2014 17:50:34 +0200
+
 puppet-module-rbldnsd (1.0.2) unstable; urgency=medium
 
   * Change module path
