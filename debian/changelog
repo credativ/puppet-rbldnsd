@@ -1,3 +1,9 @@
+puppet-module-rbldnsd (1.0.4) unstable; urgency=medium
+
+  * Add some more specific note about config source to config header
+
+ -- Patrick Schoenfeld <patrick.schoenfeld@credativ.de>  Wed, 20 Aug 2014 10:13:57 +0200
+
 puppet-module-rbldnsd (1.0.3) unstable; urgency=medium
 
   * add puppet disclaimer to template
