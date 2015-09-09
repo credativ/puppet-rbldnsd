@@ -63,6 +63,7 @@ class rbldnsd (
         ensure      => $ensure_running,
         enable      => $ensure_enabled,
         hasrestart  => true,
+        hasstatus   => false,
         require     => Package['rbldnsd']
     }
 
