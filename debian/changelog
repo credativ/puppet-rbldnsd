@@ -1,3 +1,9 @@
+puppet-module-rbldnsd (1.0.5) credativ; urgency=medium
+
+  * rbldnsd service script has no status command
+
+ -- Maximilian Gaß <maximilian.gass@credativ.de>  Thu, 10 Sep 2015 11:19:57 +0200
+
 puppet-module-rbldnsd (1.0.4) unstable; urgency=medium
 
   * Add some more specific note about config source to config header
