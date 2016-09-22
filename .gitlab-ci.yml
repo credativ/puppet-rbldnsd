@@ -1,0 +1,27 @@
+before_script:
+  - gem install bundler
+  - bundle install
+
+test:3.7:
+  image: ruby:2.1
+  variables:
+    PUPPET_VERSION: '~> 3.7.0'
+    STRICT_VARIABLES: 'yes'
+  script:
+    - bundle exec rake test
+
+test:3.7+future:
+  image: ruby:2.1
+  variables:
+    PUPPET_VERSION: '~> 3.7.0'
+    STRICT_VARIABLES: 'yes'
+    FUTURE_PARSER: 'yes'
+  script:
+    - bundle exec rake test
+
+test:4:
+  image: ruby:2.3
+  variables:
+    PUPPET_VERSION: '~> 4'
+  script:
+    - bundle exec rake test
