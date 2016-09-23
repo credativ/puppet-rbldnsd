@@ -3,13 +3,15 @@ require 'puppet-lint/tasks/puppet-lint'
 
 PuppetLint.configuration.send('disable_80chars')
 PuppetLint.configuration.relative = true
-PuppetLint.configuration.ignore_paths = ['spec/**/*.pp', 'pkg/**/*.pp']
+PuppetLint.configuration.ignore_paths = [
+  'pkg/**/*.pp',
+  'spec/**/*.pp',
+  'vendor/**/*.pp',
+]
 
 desc 'Validate manifests, templates, and ruby files'
 task :validate do
-  Dir['manifests/**/*.pp'].each do |manifest|
-    sh "puppet parser validate --noop #{manifest}"
-  end
+  sh "puppet parser validate --noop #{'--parser future' if ENV['FUTURE_PARSER'] == 'yes'} #{Dir['manifests/**/*.pp'].join(' ')}"
   Dir['spec/**/*.rb', 'lib/**/*.rb'].each do |ruby_file|
     sh "ruby -c #{ruby_file}" unless ruby_file =~ %r{spec/fixtures}
   end
@@ -18,7 +20,7 @@ task :validate do
   end
 end
 
-desc 'Run lint, validate, and spec tests.'
+desc 'Run metadata_lint, lint, validate, and spec tests.'
 task :test do
   [:lint, :validate, :spec].each do |test|
     Rake::Task[test].invoke
