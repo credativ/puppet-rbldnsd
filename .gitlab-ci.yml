@@ -1,5 +1,4 @@
 before_script:
-  - gem install bundler
   - bundle install
 
 test:3.7:
@@ -25,3 +24,8 @@ test:4:
     PUPPET_VERSION: '~> 4'
   script:
     - bundle exec rake test
+
+lint:
+  image: ruby:2.1
+  script:
+    - bundle exec rake lint

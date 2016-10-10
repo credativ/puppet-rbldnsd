@@ -7,6 +7,7 @@ PuppetLint.configuration.ignore_paths = [
   'pkg/**/*.pp',
   'spec/**/*.pp',
   'vendor/**/*.pp',
+  'tests/**/*.pp*',
 ]
 
 desc 'Validate manifests, templates, and ruby files'
@@ -20,9 +21,9 @@ task :validate do
   end
 end
 
-desc 'Run metadata_lint, lint, validate, and spec tests.'
+desc 'Run validate, and spec tests.'
 task :test do
-  [:lint, :validate, :spec].each do |test|
+  [:validate, :spec].each do |test|
     Rake::Task[test].invoke
   end
 end
