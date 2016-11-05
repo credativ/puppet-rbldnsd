@@ -1,3 +1,6 @@
 fixtures:
   symlinks:
     rbldnsd: "#{source_dir}"
+  repositories:
+    example42lib:
+      repo: 'https://github.com/credativ/puppet-example42lib'
