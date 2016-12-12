@@ -3,7 +3,7 @@ HOSTS:
   debian-8:
     platform: debian-8-amd64
     hypervisor: vagrant
-    box: debian/jessie64
+    box: puppetlabs/debian-8.2-64-puppet
     roles:
      - default
 CONFIG:

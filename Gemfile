@@ -7,6 +7,8 @@ group :development, :unit_tests do
   gem 'puppetlabs_spec_helper', '>= 1.0.0'
   gem 'puppet-lint', '>= 1.0.0'
   gem 'facter', '>= 1.7.0'
+# explicitly depend on facterdb, since we are directly using it in pacemaker_spec
+  gem 'facterdb'
   gem 'rspec-puppet'
   gem 'rspec_junit_formatter'
   gem 'rspec-puppet-facts'
