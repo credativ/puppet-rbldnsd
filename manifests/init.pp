@@ -44,15 +44,15 @@
 #
 #   Patrick Schoenfeld <patrick.schoenfeld@credativ.de>
 class rbldnsd (
-    $ensure             = params_lookup('ensure'),
-    $manage_config      = params_lookup('manage_config'),
-    $ensure_running     = params_lookup('ensure_running'),
-    $ensure_enabled     = params_lookup('ensure_enabled'),
-    $config_source      = params_lookup('config_source'),
-    $config_template    = params_lookup('config_template'),
-    $disabled_hosts     = params_lookup('disabled_hosts'),
-    $zones              = params_lookup('zones'),
-    $listener           = params_lookup('listener'),
+    $ensure             = $::rbldnsd::params::ensure,
+    $manage_config      = $::rbldnsd::params::manage_config,
+    $ensure_running     = $::rbldnsd::params::ensure_running,
+    $ensure_enabled     = $::rbldnsd::params::ensure_enabled,
+    $config_source      = $::rbldnsd::params::config_source,
+    $config_template    = $::rbldnsd::params::config_template,
+    $disabled_hosts     = $::rbldnsd::params::disabled_hosts,
+    $zones              = $::rbldnsd::params::zones,
+    $listener           = $::rbldnsd::params::listener,
     ) inherits rbldnsd::params {
 
     package { 'rbldnsd':
