@@ -60,11 +60,11 @@ class rbldnsd (
     }
 
     service { 'rbldnsd':
-        ensure      => $ensure_running,
-        enable      => $ensure_enabled,
-        hasrestart  => true,
-        hasstatus   => false,
-        require     => Package['rbldnsd']
+        ensure     => $ensure_running,
+        enable     => $ensure_enabled,
+        hasrestart => true,
+        hasstatus  => false,
+        require    => Package['rbldnsd']
     }
 
     # Disable service on this host, if hostname is in disabled_hosts
