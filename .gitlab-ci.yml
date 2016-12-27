@@ -2,6 +2,7 @@ before_script:
   - git config --global url.https://gitlab-ci-token:$CI_BUILD_TOKEN@gitlab.credativ.com/.insteadOf ssh://git@gitlab.credativ.com/
   - bundle install
 
+
 test:3.7:
   image: ruby:2.1
   variables:
@@ -19,6 +20,14 @@ test:3.7+future:
   script:
     - bundle exec rake test
 
+test:3.8:
+  image: ruby:2.1
+  variables:
+    PUPPET_VERSION: '~> 3.8.0'
+    STRICT_VARIABLES: 'yes'
+  script:
+    - bundle exec rake test
+
 test:4:
   image: ruby:2.3
   variables:
@@ -30,3 +39,4 @@ lint:
   image: ruby:2.1
   script:
     - bundle exec rake lint
+

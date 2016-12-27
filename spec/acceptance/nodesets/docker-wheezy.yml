@@ -1,0 +1,10 @@
+---
+HOSTS:
+  wheezy:
+    platform: debian-7-amd64
+    hypervisor: docker
+    image: debian:wheezy
+    roles:
+     - default
+CONFIG:
+  type: foss

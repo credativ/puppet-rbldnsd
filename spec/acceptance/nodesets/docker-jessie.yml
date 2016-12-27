@@ -1,0 +1,10 @@
+---
+HOSTS:
+  jessie:
+    platform: debian-8-amd64
+    hypervisor: docker
+    image: debian:jessie
+    roles:
+     - default
+CONFIG:
+  type: foss
