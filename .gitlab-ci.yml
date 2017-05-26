@@ -28,6 +28,15 @@ test:3.8:
   script:
     - bundle exec rake test
 
+test:3.8+future:
+  image: ruby:2.1
+  variables:
+    PUPPET_VERSION: '~> 3.8.0'
+    STRICT_VARIABLES: 'yes'
+    FUTURE_PARSER: 'yes'
+  script:
+    - bundle exec rake test
+
 test:4:
   image: ruby:2.3
   variables:

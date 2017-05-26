@@ -13,6 +13,7 @@ group :development, :unit_tests do
   gem 'rspec_junit_formatter'
   gem 'rspec-puppet-facts'
   gem 'rgen'
+  gem 'puppet-strings'
 end
 
 group :system_tests, optional: true do
