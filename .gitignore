@@ -1,0 +1,9 @@
+/Gemfile.lock
+/spec/fixtures
+/vagrant
+/vendor
+/debian/puppet-module-*/**
+/debian/debhelper-build-stamp
+/debian/files
+/debian/puppet-module-*.debhelper.log
+/debian/puppet-module-*.substvars

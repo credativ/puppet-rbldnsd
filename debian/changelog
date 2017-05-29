@@ -1,3 +1,32 @@
+puppet-module-rbldnsd (1.1.0) unstable; urgency=medium
+
+  [ Bastian Blank ]
+  * Import initial test infrastructure
+  * Update from template: Use build-token for additional repo access
+  * Update from template
+
+  [ Patrick Schoenfeld ]
+  * update from msync
+
+  [ Arnd Hannemann ]
+  * Update from template: gitlab-ci: seperate lint task
+  * update .gitignore from modulesync-puppet
+  * add missing test dependency example42lib
+  * fixup simple compile test
+  * msync update: add puppet 3.8 to gitlab-ci tests
+
+  [ Damian Lukowski ]
+  * Get rid of params_lookup, use APL instead.
+  * Add sigil for external erb variable.
+  * make lint happy.
+
+  [ Dominic de Vos ]
+  * Add 3.8+ future test
+
+  [ Damian Lukowski ]
+
+ -- Damian Lukowski <damian.lukowski@credativ.de>  Mon, 29 May 2017 15:35:51 +0200
+
 puppet-module-rbldnsd (1.0.5) credativ; urgency=medium
 
   * rbldnsd service script has no status command
